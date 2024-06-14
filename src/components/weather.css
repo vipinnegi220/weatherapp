@@ -1,0 +1,125 @@
+.weather {
+    text-align: center;
+    margin-top: 20px;
+    background-color: skyblue;
+  }
+  
+  .sun {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, yellow, orange);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    animation: float 2s linear infinite;
+  }
+
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .cloud {
+    width: 120px;
+    height: 70px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .cloud:before,
+  .cloud:after {
+    content: '';
+    position: absolute;
+    background: #f0f0f0;
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .cloud:before {
+    top: -30px;
+    left: 10px;
+  }
+  
+  .cloud:after {
+    top: -20px;
+    left: 50px;
+  }
+  
+  .rain {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .rain:before,
+  .rain:after {
+    content: '';
+    position: absolute;
+    background: skyblue;
+    width: 4px;
+    height: 15px;
+    border-radius: 50% 50% 10 10;
+    animation: fall 1s linear infinite;
+  }
+  
+  .rain:before {
+    left: 30px;
+    top: 0;
+    animation-delay: 0.1s;
+  }
+  
+  .rain:after {
+    left: 60px;
+    top: 0;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 100px;
+      opacity: 0;
+    }
+  }
+  
+  /* .weather.haze {
+    background-color: #f0e68c; 
+  } */
+
+  .haze {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(white, #909090);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0.7;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
